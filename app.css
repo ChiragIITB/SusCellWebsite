@@ -167,7 +167,7 @@
     padding: 5px;
 }
 .sponsorLeft p{
-    font-size: 25px;
+    font-size: 17px;
     margin: 5px;
     padding: 5px;
 }
@@ -182,7 +182,7 @@
     width: 49vw;
     margin: 5px;
     padding: 5px;
-    font-size: 20px;
+    font-size: 15px;
     border-radius: 5px;
     background-color: lightskyblue;
 }
@@ -193,12 +193,12 @@
 }
 
 .sponsorRight h4{
-    font-size: 25px;
+    font-size: 21px;
 }
 
 .sponsorRight p{
     
-    font-size: 21px;
+    font-size: 17px;
 }
 
 
@@ -206,7 +206,7 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    font-size: 21px; 
+    font-size: 17px; 
     margin: 5px;
     padding: 5px;
     border-radius: 5px;
