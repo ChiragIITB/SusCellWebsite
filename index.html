@@ -1,221 +1,311 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link
-    href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css"
-    rel="stylesheet"
-    integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x"
-    crossorigin="anonymous"
-  />
-  <link
-    rel="stylesheet"
-    href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css"
-  />
-  <link
-    href="https://api.mapbox.com/mapbox-gl-js/v2.1.1/mapbox-gl.css"
-    rel="stylesheet"
-  />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css" />
+  <link href="https://api.mapbox.com/mapbox-gl-js/v2.1.1/mapbox-gl.css" rel="stylesheet" />
   <link rel="stylesheet" href="style.css" />
   <title>Sustainability Cell</title>
   <link rel="icon" href="img/SC2.0.png" type="image/png">
-    <link rel="stylesheet" href="./src/css/other/font-awesome.min.css">
-    <link rel="stylesheet" href="./src/css/other/bootstrap.min.css">
-    
-    
-   
-   
+  <link rel="stylesheet" href="./src/css/other/font-awesome.min.css">
+  <link rel="stylesheet" href="./src/css/other/bootstrap.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Poppins:wght@500&family=Ysabeau+Infant:wght@500&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="/app.css">
+
+
+
+
 </head>
+
 <body data-barba="wrapper">
   <div class="load-container">
     <div class="loading-screen"></div>
   </div>
-<section class="bg-image"
-  style="background-image: url('img/Let.png'); height: 700px; width: 100%; background-size: cover;background-position: center center;background-attachment: fixed;">
-      
-  <nav class="navbar navbar-expand-lg py-1" style=" background:transparent color:black">
-    <div class="container">
-      <a href="#" class="navbar-brand">
-        <img src="img/SCell Logo Transparent BG.png" alt="Logo"  width="60" height="100%">
-      </a>
-      <button
-        class="navbar-toggler"
-        type="button"
-        data-bs-toggle="collapse"
-        data-bs-target="#navmenu"
-      >
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navmenu">
-        <ul class="navbar-nav">
-          <li class="nav-item" style="color:white">
-            <a href="#home" class="nav-link text-left navbar-nav" style="color:white ; text-align:left" >Home</a>
-          </li>
-          <li class="nav-item">
-            <a href="#about us" class="nav-link" style="color:white;">Events</a>
-          </li>
-          <li class="nav-item">
-            <a href="#ourteam" class="nav-link" style="color:white">Policy work</a>
-          </li>
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false" style="color:white">
-              Implementations
-            </a>
-            
-          </li>
-          <li class="nav-item">
-            <a href="#ContactUs" class="nav-link" style="color:white">Collaborations</a>
-          </li>
-          <li class="nav-item">
-            <a href="#ContactUs" class="nav-link" style="color:white">Contact Us</a>
-          </li>
-          
-        </ul>
+  <section class="bg-image"
+    style="background-image: url('img/Let.png'); height: 700px; width: 100%; background-size: cover;background-position: center center;background-attachment: fixed;">
+
+    <nav class="navbar navbar-expand-lg py-1" style=" background:transparent color:black">
+      <div class="container">
+        <a href="#" class="navbar-brand">
+          <img src="img/SCell Logo Transparent BG.png" alt="Logo" width="60" height="100%">
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navmenu">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navmenu">
+          <ul class="navbar-nav">
+            <li class="nav-item" style="color:white">
+              <a href="#home" class="nav-link text-left navbar-nav" style="color:white ; text-align:left">Home</a>
+            </li>
+            <li class="nav-item">
+              <a href="#about us" class="nav-link" style="color:white;">Events</a>
+            </li>
+            <li class="nav-item">
+              <a href="#ourteam" class="nav-link" style="color:white">Policy work</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false"
+                style="color:white">
+                Implementations
+              </a>
+
+            </li>
+            <li class="nav-item">
+              <a href="#ContactUs" class="nav-link" style="color:white">Collaborations</a>
+            </li>
+            <li class="nav-item">
+              <a href="#ContactUs" class="nav-link" style="color:white">Contact Us</a>
+            </li>
+
+          </ul>
+        </div>
       </div>
-    </div>
-  </nav>
-  
-  <section>
-    
-      
-      
+    </nav>
+
+    <section>
+
+
+
       <div class="container p-3">
         <div class="d-sm-flex align-items-center justify-content-between">
           <div class="text-white"> <!-- Apply text-white class to change the text color to white -->
-            <h1>  Sustainability<span class="text-warning"> Cell</span></h1>
+            <h1> Sustainability<span class="text-warning"> Cell</span></h1>
             <br>
             <div class="container">
               <div class="row">
                 <div class="col-md-6 lead my-0">
-                  
-                  <p>IIT Bombay's Sustainability Cell serves as the hub for all the institute's sustainable development innovations,research, and teachings. We want to raise awareness about sustainability on campus, bring in technology advancements,
-                  and collaborate with different institution bodies, staff, and students to implement sustainable technologies at our institute.</p>
+
+                  <p>IIT Bombay's Sustainability Cell serves as the hub for all the institute's sustainable development
+                    innovations,research, and teachings. We want to raise awareness about sustainability on campus,
+                    bring in technology advancements,
+                    and collaborate with different institution bodies, staff, and students to implement sustainable
+                    technologies at our institute.</p>
                 </div>
               </div>
             </div>
-            <button
-              class="btn btn-primary btn-lg"
-              data-bs-toggle="modal"
-              data-bs-target="#enroll"
-            >
+            <button class="btn btn-primary btn-lg" data-bs-toggle="modal" data-bs-target="#enroll">
               Join Us
             </button>
           </div>
-          
+
         </div>
       </div>
     </section>
   </section>
 
-    <section id="learn" class="p-5" style="background-image: url('img/Let.png'); background-size: cover; height:700px; width:100%;background-position:center center;background-attachment: fixed;">
-      
-        <div class="container">
-          <div class="row align-items-center justify-content-between">
-            <div class="col-md"><img src="img/ss7.png" class="img-thumbnail" alt="..."></div>
-            <div class="col-md p-5" style="background-color: rgba(99, 96, 96, 0.6); color: white;">
-              
-              <h2>About us</h2>
-              <p class="lead">Sustainability Cell</p>
-              <p>             
-                IIT Bombay's Sustainability Cell stands as a beacon for sustainable innovations, uniting research, teachings, and
-                technology for a better tomorrow. Our mission is to elevate sustainability awareness, integrate advanced technologies,
-                and foster collaborations across our vibrant community. From circular economy and climate change to food security and
-                societal values, we're dedicated to realizing the Sustainable Development Goals both within and beyond our campus
-                boundaries. As pioneers in India's academic landscape, we pledge unwavering commitment to fostering sustainable
-                development for generations to come.
-              </p>
-              
-            </div>
-          </div>
-        </div>
-      </section>
-      
-      <section class="p-5" style="background-image: url('img/Let.png'); background-size: cover; height:700px; width:100%;background-position:center center;background-attachment: fixed;">
-        <div class="container">
-          <div class="row text-center g-4">
-            <div class="col-md">
-                  
-                  <script src="script.js"></script>
-          </div>
-        </div>
-      </section>
-      
+  <section id="learn" class="p-5"
+    style="background-image: url('img/Let.png'); background-size: cover; height:700px; width:100%;background-position:center center;background-attachment: fixed;">
 
-      <section id="work" class="p-3 bg-dark text-light">
-        <div class="container">
-          <div class="row align-items-center justify-content-between">
-            <div class="col-md p-1">
-              <h2 style="color:greenyellow;">Work Domains</h2>
-              <p>
-                Sustainability cell's leadership team, together with faculty, students in collaboration with Hostel Affairs and
-                Technical affairs, assist IIT Bombay administration with achieving the set of challenging goals for energy use, local
-                foods purchasing, recycling they have set for the campus. Sustainability cell enables the campus to embrace
-                sustainability principles and practices. 
-              
-                <h2 style="color:greenyellow;">Areas of Responsibility</h2>
-                We aim to make the campus a testbed for pilot projects involving professors and students. Create a platform in the
-                institute for discussion and debates regarding various sustainability issues on and off-campus. We encourage
-                cross-campus cooperation among various sustainability-focused organizations and strengthen relationships between the
-                academic and policymaking communities.
-                <h2 style="color:greenyellow;">Scale of Impact</h2>Past and current efforts on campus during the four years, we’ve run several projects relating to waterless urinals,net-zero meals, water conservation system designs, Bot-machinery to clean solar panels, installing motion sensors for
-                partial lighting, installing perforation machines, organizing lectures.
-                
-              </p>
-              <a href="#" class="btn btn-light mt-3">
-                <i class="bi bi-chevron-right"></i> Explore More
-              </a>
-            </div>
-            <div class="col-md">
-              <img src="img/work.png" class="img-fluid" alt="SCell" />
-            </div>
-          </div>
-        </div>
-      </section>
-      <section id="Team Image" class="p-5 bg-light" style="background-image: url('img/TEAM.png'); background-size: cover; height:700px; width:100% ; background-position: center center;background-attachment: fixed;">
-        <div class="container">
-          <div class="row">
-            
-          </div>
-          <div class="row">
-            <div class="col-md text-center">
-              
-            </div>
-          </div>
-        </div>
-      </section>
-      
-      
-    
-    </section>
+    <div class="container">
+      <div class="row align-items-center justify-content-between">
+        <div class="col-md"><img src="img/ss7.png" class="img-thumbnail" alt="..."></div>
+        <div class="col-md p-5" style="background-color: rgba(99, 96, 96, 0.6); color: white;">
 
-    <section id="Connect" class="p-5 bg-primary">
-      <div class="container">
-        <h2 class="text-center text-white">Let's Connect</h2>
-        <p class="lead text-center text-white mb-5">
-            "Discover the dynamic Managers at the helm of our Sustainability Cell. Each individual exemplifies a unique blend of
-            passion, expertise, and vision, tirelessly working towards a shared objective: shaping a sustainable future for all.
-            Their leadership is not just about guiding, but also inspiring others."
+          <h2>About us</h2>
+          <p class="lead">Sustainability Cell</p>
+          <p>
+            IIT Bombay's Sustainability Cell stands as a beacon for sustainable innovations, uniting research,
+            teachings, and
+            technology for a better tomorrow. Our mission is to elevate sustainability awareness, integrate advanced
+            technologies,
+            and foster collaborations across our vibrant community. From circular economy and climate change to food
+            security and
+            societal values, we're dedicated to realizing the Sustainable Development Goals both within and beyond our
+            campus
+            boundaries. As pioneers in India's academic landscape, we pledge unwavering commitment to fostering
+            sustainable
+            development for generations to come.
+          </p>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="p-5"
+    style="background-image: url('img/Let.png'); background-size: cover; height:700px; width:100%;background-position:center center;background-attachment: fixed;">
+    <div class="container">
+      <div class="row text-center g-4">
+        <div class="col-md">
+
+          <script src="script.js"></script>
+        </div>
+      </div>
+  </section>
+
+
+  <!-- ......................Implenetations Begin............ -->
+
+  <section id="implementations">
+
+    <h2 id="impheader" class="impheader"> Implementations </h2>
+
+    <div class="impContainer"> <!-- .........contains all the implemnetations.....-->
+
+      <div class="impBox">
+        <h3>Waste Data Display Boards in Mess</h3>
+        <img src="" alt="">
+        <p>Waste Display boards have been successfully integrated into every hostel, providing a transparent view of
+          daily food wastage. By regularly calibrating and showcasing these figures, residents are actively engaged in
+          understanding and reducing their environmental footprint. This initiative stands as a testament to our
+          commitment to creating awareness and fostering a culture of responsible waste management.
         </p>
-     
+      </div>
 
- 
-        <div class="row g-4">
+      <div class="impBox">
+        <h3>Tree Plantation</h3>
+        <img src="/img/treePlantation.png" alt="">
+        <p>Teamed up with Team Shunya for a collaborative tree-plantation initiative, uniting sustainability-focused
+          groups from institutes across India. Our joint effort, held on Independence Day 2022, aimed at fostering
+          environmental consciousness and contributing to a greener future. Together, we planted the seeds of positive
+          change.
+        </p>
+      </div>
+
+      <div class="impBox">
+        <h3>Swacchta Pakhwada 2023</h3>
+        <img src="/img/swachchtaPakhwada.png" alt="">
+        <p>Assisted in the execution of the Swachhta Pakhwada observed by the Government of India from September 16 to
+          September 30 with the aim of mobilizing the citizens of India to maintain high standards of cleanliness in
+          their homes, places of work and public spaces. The event was observed across all hostels in the institute and
+          the hostels' efforts along with their effectiveness were documented and reported by the Sustainability Cell
+          qualitatively and quantitatively.</p>
+      </div>
+
+      <div class="impBox">
+        <h3>Bin segregation project</h3>
+        <img src="/img/binSegregation.jpg" alt="">
+        <p>The Sustainability Cell in association with the Hostel Affairs Council, IIT Bombay have launched the waste
+          bin segregation initiative in the institute. This initiative promotes environmental sustainability by
+          facilitating the efficient disposal and recycling of waste materials, reducing the overall carbon footprint of
+          the campus. This practice enhances resource conservation, as separated waste streams can be processed more
+          effectively, diverting recyclable materials away from landfills. <!--Additionally, a culture of waste bin
+          segregation fosters awareness and responsible waste management among the IIT Bombay community, contributing to
+          a cleaner and healthier campus environment.-->
+        </p>
+      </div>
+
+      <div class="impBox">
+        <h3>Carbon Footprinting</h3>
+        <img src="/img/carbonFootprint.png" alt="">
+        <p>We are working with Professors Vikram Vishal (Earth Science) and Arnab Dutta (Chemistry) to gather
+          information and perform a thorough carbon footprint assessment of the IIT Bombay campus in order to benchmark
+          the institute's development and create suggestions for enhancing our carbon performance. The emission breakup
+          is :- 95% from Scope 2, 4.4% from Scope 1 and 0.6% from Scope 3.</p>
+      </div>
+
+      <div class="impBox">
+        <h3>IITB Half Marathon</h3>
+        <img src="" alt="">
+        <p>At the IITB Half Marathon on October 30th, #BreatheBetterMumbai took center stage, driving awareness on air
+          pollution. Emphasizing sustainability, we partnered with a certified recycling organization for plastic bottle
+          recycling and utilized waste cycle cardboard boxes to convey powerful air pollution messages. The event
+          featured inspiring displays of winning projects from Airathon Mumbai, reflecting our collective strides
+          towards a cleaner, healthier Mumbai.</p>
+      </div>
+
+      <div class="impBox">
+        <h3>Green Cup Launch</h3>
+        <img src="/img/greenCup.png" alt="">
+        <p>Conducted an event in collaboration with the HA Council to announce the official launch of the Green Cup.
+          Students from all hostels attended and the need, benefits, procedures and scoring index of the Green Cup was
+          explained. This created awareness at a large-scale to formally kick off the Green Cup in November. There were
+          100+ attendees at the event. </p>
+      </div>
+
+
+    </div>
+  </section>
+
+  <!-- ......................Implenetations End............... -->
+
+
+  <section id="work" class="p-3 bg-dark text-light">
+    <div class="container">
+      <div class="row align-items-center justify-content-between">
+        <div class="col-md p-1">
+          <h2 style="color:greenyellow;">Work Domains</h2>
+          <p>
+            Sustainability cell's leadership team, together with faculty, students in collaboration with Hostel Affairs
+            and
+            Technical affairs, assist IIT Bombay administration with achieving the set of challenging goals for energy
+            use, local
+            foods purchasing, recycling they have set for the campus. Sustainability cell enables the campus to embrace
+            sustainability principles and practices.
+
+          <h2 style="color:greenyellow;">Areas of Responsibility</h2>
+          We aim to make the campus a testbed for pilot projects involving professors and students. Create a platform in
+          the
+          institute for discussion and debates regarding various sustainability issues on and off-campus. We encourage
+          cross-campus cooperation among various sustainability-focused organizations and strengthen relationships
+          between the
+          academic and policymaking communities.
+          <h2 style="color:greenyellow;">Scale of Impact</h2>Past and current efforts on campus during the four years,
+          we’ve run several projects relating to waterless urinals,net-zero meals, water conservation system designs,
+          Bot-machinery to clean solar panels, installing motion sensors for
+          partial lighting, installing perforation machines, organizing lectures.
+
+          </p>
+          <a href="#" class="btn btn-light mt-3">
+            <i class="bi bi-chevron-right"></i> Explore More
+          </a>
+        </div>
+        <div class="col-md">
+          <img src="img/work.png" class="img-fluid" alt="SCell" />
+        </div>
+      </div>
+    </div>
+  </section>
+  <section id="Team Image" class="p-5 bg-light"
+    style="background-image: url('img/TEAM.png'); background-size: cover; height:700px; width:100% ; background-position: center center;background-attachment: fixed;">
+    <div class="container">
+      <div class="row">
+
+      </div>
+      <div class="row">
+        <div class="col-md text-center">
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+
+  </section>
+
+  <section id="Connect" class="p-5 bg-primary">
+    <div class="container">
+      <h2 class="text-center text-white">Let's Connect</h2>
+      <p class="lead text-center text-white mb-5">
+        "Discover the dynamic Managers at the helm of our Sustainability Cell. Each individual exemplifies a unique
+        blend of
+        passion, expertise, and vision, tirelessly working towards a shared objective: shaping a sustainable future for
+        all.
+        Their leadership is not just about guiding, but also inspiring others."
+      </p>
+
+
+
+      <div class="row g-4">
         <div class="col-md-6 col-lg-3">
           <div class="card bg-light">
             <div class="card-body text-center">
-              <img
-                src="img/ams.jpg"
-                class="rounded-circle mb-3 img-fluid"
-                alt=""
-                height="150px"
-                width="150px"
-                
-              />
+              <img src="img/ams.jpg" class="rounded-circle mb-3 img-fluid" alt="" height="150px" width="150px" />
               <h3 class="card-title mb-3">Aryaman Seth</h3>
               <p class="card-text">
-              Overall Coordinator
+                Overall Coordinator
               </p>
               <a href="#"><i class="bi bi-twitter text-dark mx-1"></i></a>
               <a href="#"><i class="bi bi-facebook text-dark mx-1"></i></a>
@@ -225,113 +315,99 @@
           </div>
         </div>
 
-          <div class="col-md-6 col-lg-3">
-            <div class="card bg-light">
-              <div class="card-body text-center">
-                <img
-                  src="img/as.jpg"
-                  class="rounded-circle mb-3 img-fluid"
-                  alt=""
-                  height="150px"
-                  width="150px"
-                />
-                <h3 class="card-title mb-3">Ayushman Sinha</h3>
-                <p class="card-text">
-                    
-                   Manager
-                </p>
-                <a href="#"><i class="bi bi-twitter text-dark mx-1"></i></a>
-                <a href="#"><i class="bi bi-facebook text-dark mx-1"></i></a>
-                <a href="#"><i class="bi bi-linkedin text-dark mx-1"></i></a>
-                <a href="#"><i class="bi bi-instagram text-dark mx-1"></i></a>
-              </div>
+        <div class="col-md-6 col-lg-3">
+          <div class="card bg-light">
+            <div class="card-body text-center">
+              <img src="img/as.jpg" class="rounded-circle mb-3 img-fluid" alt="" height="150px" width="150px" />
+              <h3 class="card-title mb-3">Ayushman Sinha</h3>
+              <p class="card-text">
+
+                Manager
+              </p>
+              <a href="#"><i class="bi bi-twitter text-dark mx-1"></i></a>
+              <a href="#"><i class="bi bi-facebook text-dark mx-1"></i></a>
+              <a href="#"><i class="bi bi-linkedin text-dark mx-1"></i></a>
+              <a href="#"><i class="bi bi-instagram text-dark mx-1"></i></a>
             </div>
-          </div>
-
-          <div class="col-md-6 col-lg-3">
-            <div class="card bg-light">
-              <div class="card-body text-center">
-                <img src="img/hg.jpg"  class="rounded-circle mb-3 img-fluid"
-                alt=""
-                class="img-fluid"
-                height="150px"
-                width="150px"
-              /> 
-                <h3 class="card-title mb-3">Himank Gupta</h3>
-                <p class="card-text">
-                  Manager
-                </p>
-                <a href="#"><i class="bi bi-twitter text-dark mx-1"></i></a>
-                <a href="#"><i class="bi bi-facebook text-dark mx-1"></i></a>
-                <a href="#"><i class="bi bi-linkedin text-dark mx-1"></i></a>
-                <a href="#"><i class="bi bi-instagram text-dark mx-1"></i></a>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-md-6 col-lg-3">
-            <div class="card bg-light">
-              <div class="card-body text-center">
-                <img src="img/sg.jpg"  class="rounded-circle mb-3"
-                alt=""
-                height="150px"
-                width="150px"
-               
-              /> 
-                
-                 
-                <h3 class="card-title mb-3">Shreyash Gupta</h3>
-                <p class="card-text">
-                 Manager
-                </p>
-                <a href="#"><i class="bi bi-twitter text-dark mx-1"></i></a>
-                <a href="#"><i class="bi bi-facebook text-dark mx-1"></i></a>
-                <a href="#"><i class="bi bi-linkedin text-dark mx-1"></i></a>
-                <a href="#"><i class="bi bi-instagram text-dark mx-1"></i></a>
-              </div>
-            </div>
-          </div>
-
-        </div>
-      </div>
-    </section>
-
-    
-<section class="p-5">
-    <div class="container">
-        <div class="row g-4">
-          <div class="col-md">
-            <h2 class="text-center mb-4">Contact Info</h2>
-            <ul class="list-group list-group-flush lead">
-              <li class="list-group-item">
-                <span class="fw-bold">Main Location:</span> Lecture Hall Complex, IIT Bombay, Powai, Mumbai, Maharashtra, India. PIN - 400076
-                <i class="bi bi-geo-alt-fill ms-2"></i>
-              </li>
-              <li class="list-group-item">
-                <span class="fw-bold">Phone:</span><br>
-                Aayushman: 8726755579 <i class="bi bi-telephone-fill ms-2"></i><br>
-                Himank: 8726755579 <i class="bi bi-telephone-fill ms-2"></i><br>
-                Shreyash: 8726755579 <i class="bi bi-telephone-fill ms-2"></i><br>
-              </li>
-              <li class="list-group-item">
-                <span class="fw-bold">Email:</span> tushaarjhamtani@gmail.com <i class="bi bi-envelope-fill ms-2"></i>
-              </li>
-            </ul>
           </div>
         </div>
+
+        <div class="col-md-6 col-lg-3">
+          <div class="card bg-light">
+            <div class="card-body text-center">
+              <img src="img/hg.jpg" class="rounded-circle mb-3 img-fluid" alt="" class="img-fluid" height="150px"
+                width="150px" />
+              <h3 class="card-title mb-3">Himank Gupta</h3>
+              <p class="card-text">
+                Manager
+              </p>
+              <a href="#"><i class="bi bi-twitter text-dark mx-1"></i></a>
+              <a href="#"><i class="bi bi-facebook text-dark mx-1"></i></a>
+              <a href="#"><i class="bi bi-linkedin text-dark mx-1"></i></a>
+              <a href="#"><i class="bi bi-instagram text-dark mx-1"></i></a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-3">
+          <div class="card bg-light">
+            <div class="card-body text-center">
+              <img src="img/sg.jpg" class="rounded-circle mb-3" alt="" height="150px" width="150px" />
+
+
+              <h3 class="card-title mb-3">Shreyash Gupta</h3>
+              <p class="card-text">
+                Manager
+              </p>
+              <a href="#"><i class="bi bi-twitter text-dark mx-1"></i></a>
+              <a href="#"><i class="bi bi-facebook text-dark mx-1"></i></a>
+              <a href="#"><i class="bi bi-linkedin text-dark mx-1"></i></a>
+              <a href="#"><i class="bi bi-instagram text-dark mx-1"></i></a>
+            </div>
+          </div>
+        </div>
+
       </div>
-      
-       
     </div>
   </section>
-  
 
-<!-- Footer -->
-<footer class="p-5 bg-dark text-white text-center position-relative">
+
+  <section class="p-5">
+    <div class="container">
+      <div class="row g-4">
+        <div class="col-md">
+          <h2 class="text-center mb-4">Contact Info</h2>
+          <ul class="list-group list-group-flush lead">
+            <li class="list-group-item">
+              <span class="fw-bold">Main Location:</span> Lecture Hall Complex, IIT Bombay, Powai, Mumbai, Maharashtra,
+              India. PIN - 400076
+              <i class="bi bi-geo-alt-fill ms-2"></i>
+            </li>
+            <li class="list-group-item">
+              <span class="fw-bold">Phone:</span><br>
+              Aayushman: 8726755579 <i class="bi bi-telephone-fill ms-2"></i><br>
+              Himank: 8726755579 <i class="bi bi-telephone-fill ms-2"></i><br>
+              Shreyash: 8726755579 <i class="bi bi-telephone-fill ms-2"></i><br>
+            </li>
+            <li class="list-group-item">
+              <span class="fw-bold">Email:</span> tushaarjhamtani@gmail.com <i class="bi bi-envelope-fill ms-2"></i>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+
+    </div>
+  </section>
+
+
+  <!-- Footer -->
+  <footer class="p-5 bg-dark text-white text-center position-relative">
     <div class="container">
       <p class="lead">All Rights Reserved. &copy; Sustainability Cell</p>
       <p class="lead">Created with ❤️ by SCellIITB<br>
-    FOLLOW US ON</p>
+        FOLLOW US ON</p>
       <div>
         <a href="https://instagram.com/sustainabilitycell?igshid=OGQ5ZDc2ODk2ZA==" class="text-white me-3">
           <i class="bi bi-instagram h2"></i>
@@ -339,7 +415,8 @@
         <a href="https://www.facebook.com/SustainabilityCell?mibextid=ZbWKwL" class="text-white">
           <i class="bi bi-facebook h2"></i>
         </a>
-        <a href="https://l.instagram.com/?u=https%3A%2F%2Fwww.linkedin.com%2Fcompany%2Fsustainabilitycell%2F&e=AT3BrYoWWk7sRQhiYjCcAwGp9skQoK2mVXesT4qWNlFa5fwOnffQO4UZk9y8TcF3LaGFFkraIVwVK_7cCSP6bhEbxx9F5iNKoHn5OluRecW_IFS7-H4jMA" class="text-white ms-3">
+        <a href="https://l.instagram.com/?u=https%3A%2F%2Fwww.linkedin.com%2Fcompany%2Fsustainabilitycell%2F&e=AT3BrYoWWk7sRQhiYjCcAwGp9skQoK2mVXesT4qWNlFa5fwOnffQO4UZk9y8TcF3LaGFFkraIVwVK_7cCSP6bhEbxx9F5iNKoHn5OluRecW_IFS7-H4jMA"
+          class="text-white ms-3">
           <i class="bi bi-linkedin h2"></i>
         </a>
         <a href="https://www.youtube.com/channel/UCcQsEZqhnt94Ep6VNRZDs9Q" class="text-white ms-3">
@@ -349,125 +426,96 @@
       <a href="#" class="position-absolute bottom-0 end-0 p-5">
         <i class="bi bi-arrow-up-circle h1"></i>
       </a>
-      
+
     </div>
   </footer>
-  
 
-    <!-- Modal -->
-    <div
-      class="modal fade"
-      id="enroll"
-      tabindex="-1"
-      aria-labelledby="enrollLabel"
-      aria-hidden="true"
-    >
-      <div class="modal-dialog">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h5 class="modal-title" id="enrollLabel">Enrollment</h5>
-            <button
-              type="button"
-              class="btn-close"
-              data-bs-dismiss="modal"
-              aria-label="Close"
-            ></button>
-          </div>
-          <div class="modal-body">
-            <p class="lead">Fill out this form and we will get back to you</p>
-            <form>
-              <div class="mb-3">
-                <label for="first-name" class="col-form-label">
-                  First Name:
-                </label>
-                <input type="text" class="form-control" id="first-name" />
-              </div>
-              <div class="mb-3">
-                <label for="last-name" class="col-form-label">Last Name:</label>
-                <input type="text" class="form-control" id="last-name" />
-              </div>
-              <div class="mb-3">
-                <label for="email" class="col-form-label">Email:</label>
-                <input type="email" class="form-control" id="email" />
-              </div>
-              <div class="mb-3">
-                <label for="phone" class="col-form-label">Phone:</label>
-                <input type="tel" class="form-control" id="phone" />
-              </div>
-            </form>
-          </div>
-          <div class="modal-footer">
-            <button
-              type="button"
-              class="btn btn-secondary"
-              data-bs-dismiss="modal"
-            >
-              Close
-            </button>
-            <button type="button" class="btn btn-primary">Submit</button>
-          </div>
+
+  <!-- Modal -->
+  <div class="modal fade" id="enroll" tabindex="-1" aria-labelledby="enrollLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="enrollLabel">Enrollment</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <p class="lead">Fill out this form and we will get back to you</p>
+          <form>
+            <div class="mb-3">
+              <label for="first-name" class="col-form-label">
+                First Name:
+              </label>
+              <input type="text" class="form-control" id="first-name" />
+            </div>
+            <div class="mb-3">
+              <label for="last-name" class="col-form-label">Last Name:</label>
+              <input type="text" class="form-control" id="last-name" />
+            </div>
+            <div class="mb-3">
+              <label for="email" class="col-form-label">Email:</label>
+              <input type="email" class="form-control" id="email" />
+            </div>
+            <div class="mb-3">
+              <label for="phone" class="col-form-label">Phone:</label>
+              <input type="tel" class="form-control" id="phone" />
+            </div>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
+            Close
+          </button>
+          <button type="button" class="btn btn-primary">Submit</button>
         </div>
       </div>
     </div>
+  </div>
 
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4"
-      crossorigin="anonymous"
-    ></scrip>
-    <script src="https://api.mapbox.com/mapbox-gl-js/v2.1.1/mapbox-gl.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4"
+    crossorigin="anonymous"></script>
+  <script src="https://api.mapbox.com/mapbox-gl-js/v2.1.1/mapbox-gl.js"></script>
 
-    <script>
-      mapboxgl.accessToken =
-        'pk.eyJ1IjoiYnRyYXZlcnN5IiwiYSI6ImNrbmh0dXF1NzBtbnMyb3MzcTBpaG10eXcifQ.h5ZyYCglnMdOLAGGiL1Auw'
-      var map = new mapboxgl.Map({
-        container: 'map',
-        style: 'mapbox://styles/mapbox/streets-v11',
-        center: [-71.060982, 42.35725],
-        zoom: 18,
-      })
-    </script>
-  </body>
+  <script>
+    mapboxgl.accessToken =
+      'pk.eyJ1IjoiYnRyYXZlcnN5IiwiYSI6ImNrbmh0dXF1NzBtbnMyb3MzcTBpaG10eXcifQ.h5ZyYCglnMdOLAGGiL1Auw'
+    var map = new mapboxgl.Map({
+      container: 'map',
+      style: 'mapbox://styles/mapbox/streets-v11',
+      center: [-71.060982, 42.35725],
+      zoom: 18,
+    })
+  </script>
+</body>
+
 </html>
 
-  <!-- Rest of your HTML content goes here -->
+<!-- Rest of your HTML content goes here -->
 
-  <!-- Include Bootstrap JS and other scripts if needed -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
-  <script src="https://api.mapbox.com/mapbox-gl-js/v2.1.1/mapbox-gl.js"></script>
+<!-- Include Bootstrap JS and other scripts if needed -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
+  integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
+<script src="https://api.mapbox.com/mapbox-gl-js/v2.1.1/mapbox-gl.js"></script>
 
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
-  <script src="https://api.mapbox.com/mapbox-gl-js/v2.1.1/mapbox-gl.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
+  integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
+<script src="https://api.mapbox.com/mapbox-gl-js/v2.1.1/mapbox-gl.js"></script>
 
-  <!-- Add this JavaScript at the bottom of your HTML -->
-  <script>
-    $(document).ready(function() {
-        $('[data-bs-toggle="popover"]').popover({
-            trigger: 'hover', 
-            placement: 'top', 
-            html: true 
-        });
+<!-- Add this JavaScript at the bottom of your HTML -->
+<script>
+  $(document).ready(function () {
+    $('[data-bs-toggle="popover"]').popover({
+      trigger: 'hover',
+      placement: 'top',
+      html: true
     });
-  </script>
-  <!-- At the bottom of your HTML body -->
-  <script src="script.js"></script>
-  
+  });
+</script>
+<!-- At the bottom of your HTML body -->
+<script src="/script.js"></script>
+
 
 </body>
+
 </html>
-
- 
-
-
-
-
-
-
-
-
-
-
-
-
-
-    
