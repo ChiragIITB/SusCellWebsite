@@ -65,6 +65,160 @@
 
 
 
+/* .................Policies and Sponsors Styling............*/
+
+#policy{
+    height: 100vh;
+    background-color: lightseagreen;
+    /* background-color: rgba(99, 96, 96, 0.6); */
+}
+
+.policy{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: inherit;
+}
+
+.policyText{
+    height: inherit;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    margin: 10px;
+}
+
+.policy h2{
+    font-size: 35px;
+    font-weight: 800;
+    color: black;
+    margin: 5px;
+    padding: 5px;
+}
+
+.policy h3{
+    font-size: 25px;
+    color: black;
+    margin: 5px;
+    padding: 5px;
+}
+
+.policy p{
+    font-size: larger;
+    margin: 5px;
+    padding: 5px;
+}
+
+
+.policyImage img{
+    width: 50vw;
+    margin: 10px;
+    padding: 10px;
+}
+
+
+
+/* ...............Sponsors Styling............ */
+
+
+#sponsors{
+    height: 100vh;
+}
+
+#sponsors h2{
+    font-size: 35px;
+    font-weight: 800;
+    color: black;
+    margin: 5px;
+    padding: 5px;
+}
+
+.sponsors{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+
+.sponsorsTop{
+    display: flex;
+}
+
+.sponsorLeft{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    width: 49vw;
+    margin: 5px;
+    border-radius: 5px;
+    background-color: aquamarine;
+}
+
+.sponsorLeft div{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+.sponsorLeft h3{
+    font-size: 30px;
+    color: black;
+    margin: 5px;
+    padding: 5px;
+}
+.sponsorLeft p{
+    font-size: 25px;
+    margin: 5px;
+    padding: 5px;
+}
+
+.sponsorLeft img{
+    width: 250px;
+}
+
+.sponsorRight{
+    display: flex;
+    flex-direction: column;
+    width: 49vw;
+    margin: 5px;
+    padding: 5px;
+    font-size: 20px;
+    border-radius: 5px;
+    background-color: lightskyblue;
+}
+
+.sponsorRight div{
+    margin: 5px;
+    padding: 5px;
+}
+
+.sponsorRight h4{
+    font-size: 25px;
+}
+
+.sponsorRight p{
+    
+    font-size: 21px;
+}
+
+
+.sponsorBottom{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-size: 21px; 
+    margin: 5px;
+    padding: 5px;
+    border-radius: 5px;
+    background-color: lightcoral;
+}
+.sponsorBottom p{
+    margin: 5px;
+    padding: 5px;
+}
+
+
+
 
 
 
