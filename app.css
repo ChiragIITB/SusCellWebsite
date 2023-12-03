@@ -1,3 +1,10 @@
+body{
+    background-image: url(img/Let.png);
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+
 /* .............Events Styling............. */
 
 #events{
@@ -6,14 +13,14 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color:rgb(255, 255, 255);
+    /* background-color:rgb(255, 255, 255); */
     padding: 10px;
 }
 
 #events h2{
     font-size: 40px;
     font-weight: 800;
-    color: black;
+    color: white;
 }
 
 .eventContainer{
@@ -30,8 +37,9 @@
     flex-direction: column;
     justify-content: top;
     align-items: center;
-    background-color:rgba(99, 96, 96, 0.6);  
+    /* background-color: rgba(144,238,144,0.7);   */
     /* background-color: rgba(255,255, 255, 0.6); */
+    background-color: rgba(31, 69, 112, 0.95);
     width: 425px;
     height: 600px;
     margin: 25px 10px;
@@ -45,14 +53,17 @@
 .eventBox h3{
     font-size: 25px;
     text-align: center;
-    color: rgb(35, 35, 72);
+    color: white;
+    /* color: rgb(35, 35, 72); */
     /* text-shadow: 0px 0px 1px black; */
 }
 
 .eventBox p{
-    text-align: center;
+    font-size: 16px;
+    text-align: justify;
     font-family: 'inter',sans-serif;
     font-weight: 500;
+    color: lightgray;
 }
 
 .eventBox img{
@@ -70,8 +81,9 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color:rgba(31, 69, 112, 1);
+    background-color:rgba(31, 69, 112, 0.95);
     padding: 10px;
+    /* border-top: 5px solid black; */
 }
 
 #implementations h2{
@@ -94,30 +106,37 @@
     justify-content: top;
     align-items: center;
     /* background-color:rgba(99, 96, 96, 0.6); */  
-    background-color: rgba(255,255, 255, 0.6);
+    background-color: rgba(211,211,211, 0.8);
+    /* background-color: rgba(31, 69, 112, 0.97); */
     width: 425px;
     height: 550px;
     margin: 25px 10px;
     padding: 10px;
     /* border: 5px solid white; */
     border-radius: 5px;
-    box-shadow: 0 0 10px black;
+    box-shadow: 0 0 7px black;
     transition: all 0.5s;
 } .impBox:hover{
     transform: scale(1.05);
 }
 
 .impBox h3{
-    font-size: 18px;
+    font-size: 20px;
+    font-weight: 600;
     text-align: center;
     color: rgb(35, 35, 72);
+    /* color: white; */
+    border-bottom: 2px solid rgba(0,0,0, 0.4);
     /* text-shadow: 0px 0px 1px black; */
 }
 
 .impBox p{
-    text-align: center;
+    font-size: 16px;
+    padding: 5px;
+    text-align: justify;
     font-family: 'inter',sans-serif;
     font-weight: 500;
+    color: black;
 }
 
 .impBox img{
@@ -133,7 +152,7 @@
 
 #policy{
     height: 100vh;
-    background-color: lightseagreen;
+    /* background-color: rgba(32, 178,170, 0.5); */
     /* background-color: rgba(99, 96, 96, 0.6); */
 }
 
@@ -156,14 +175,14 @@
 .policy h2{
     font-size: 35px;
     font-weight: 800;
-    color: black;
+    color: white;
     margin: 5px;
     padding: 5px;
 }
 
 .policy h3{
     font-size: 25px;
-    color: black;
+    color: lightgray;
     margin: 5px;
     padding: 5px;
 }
@@ -172,6 +191,9 @@
     font-size: larger;
     margin: 5px;
     padding: 5px;
+    font-family: 'inter', sans-serif;
+    color: black;
+    font-weight: 500;
 }
 
 
@@ -186,14 +208,11 @@
 /* ...............Sponsors Styling............ */
 
 
-#sponsors{
-    height: 100vh;
-}
-
 #sponsors h2{
+    text-align: center;
     font-size: 35px;
     font-weight: 800;
-    color: black;
+    color: white;
     margin: 5px;
     padding: 5px;
 }
@@ -214,9 +233,12 @@
     flex-direction: column;
     justify-content: space-evenly;
     width: 49vw;
-    margin: 5px;
+    margin: 10px;
+    padding: 10px;
     border-radius: 5px;
-    background-color: aquamarine;
+    /* background-color: aquamarine; */
+    background-color: rgba(31, 69, 112, 0.97);
+    color: lightgray;
 }
 
 .sponsorLeft div{
@@ -226,14 +248,17 @@
 }
 .sponsorLeft h3{
     font-size: 30px;
-    color: black;
+    font-weight: 700;
+    color: white;
     margin: 5px;
     padding: 5px;
+    border-bottom: 3px solid rgba(0,0,0, 0.4);
 }
 .sponsorLeft p{
     font-size: 17px;
     margin: 5px;
     padding: 5px;
+    font-family: 'inter', sans-serif;
 }
 
 .sponsorLeft img{
@@ -244,11 +269,13 @@
     display: flex;
     flex-direction: column;
     width: 49vw;
-    margin: 5px;
-    padding: 5px;
+    margin: 10px;
+    padding: 10px;
     font-size: 15px;
     border-radius: 5px;
-    background-color: lightskyblue;
+    /* background-color: lightskyblue; */
+    background-color: rgba(31, 69, 112, 0.97);
+    color: lightgray;
 }
 
 .sponsorRight div{
@@ -258,10 +285,13 @@
 
 .sponsorRight h4{
     font-size: 21px;
+    color: white;
+    border-bottom: 2px solid rgba(0,0,0,0.4);
 }
 
 .sponsorRight p{
     
+    font-family: 'inter', sans-serif;
     font-size: 17px;
 }
 
@@ -271,14 +301,17 @@
     flex-direction: column;
     justify-content: center;
     font-size: 17px; 
-    margin: 5px;
+    margin: 10px;
     padding: 5px;
     border-radius: 5px;
-    background-color: lightcoral;
+    /* background-color: lightcoral; */
+    background-color: rgba(31, 69, 112, 0.97);
 }
 .sponsorBottom p{
     margin: 5px;
     padding: 5px;
+    color: lightgray;
+    font-family: 'inter', sans-serif;
 }
 
 
