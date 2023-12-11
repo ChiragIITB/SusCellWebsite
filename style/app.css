@@ -11,7 +11,7 @@ body{
     background: fixed;
     background-image: url(/images/main-background.png);
     background-size: cover;
-    background-color: lightgray;
+    /* background-color: lightgray; */
 }
 
 
@@ -48,7 +48,7 @@ body{
     flex: 1;
     text-decoration: none;
     color: white;
-    font-size: 23px;
+    font-size: 17px;
     font-family: 'poppins';
     text-align: center;
     margin: 5px;
@@ -62,7 +62,7 @@ body{
    margin-top: 5%;
 }
 .banner-box h1{
-    font-size: 45px;
+    font-size: 40px;
     color: white;
     font-family: 'alkatra';
 }
@@ -70,7 +70,7 @@ body{
     color: #FED049;
 }
 .banner-box p{
-    font-size: 23px;
+    font-size: 18px;
     font-family: 'inter';
     color: white;
 }
@@ -199,12 +199,12 @@ body{
 }.content h3{
     font-family: 'Alkatra';
     font-weight: 700;
-    font-size: 45px;
+    font-size: 35px;
     color:#1B6B93;
 }.content p{
     font-family: 'poppins';
     font-weight: 500;
-    font-size: 21px;
+    font-size: 17px;
     color:black;
     /* background-color: rgba(7, 100, 171, 0.269); */
     padding: 30px;
@@ -300,7 +300,7 @@ body{
     width: 100px;
 }
 .event-text h3{
-    font-size: 35px;
+    font-size: 30px;
     font-family: 'alkatra';
     padding: 5px 45px;
     color: #A2FF86;
@@ -308,7 +308,7 @@ body{
 }
 
 .event-text p{
-    font-size: 20px;
+    font-size: 17px;
     font-family: 'poppins';
     padding: 5px 45px;
     color: whitesmoke;
@@ -377,7 +377,7 @@ body{
 }
 
 #implementations h2{
-    font-size: 50px;
+    font-size: 40px;
     font-family: 'alkatra';
     margin: 5px 50px;
     padding: 10px 30px;
@@ -419,7 +419,7 @@ body{
 }
 
 .imp-content h3{
-    font-size: 35px;
+    font-size: 25px;
     font-family: 'Alkatra';
     color: #A2FF86;
     padding: 10px;
@@ -438,7 +438,7 @@ body{
 .imp-content p{
     display: flex;
     align-items: center;
-    font-size: 20px;
+    font-size: 17px;
     font-family: 'poppins';
     color: whitesmoke;
     height: 45%;
@@ -569,7 +569,7 @@ body{
     padding: 10px;
 }
 .policy-text h2, .collab-text h2{
-    font-size: 45px;
+    font-size: 40px;
     color: #A2FF86;
     font-family: 'alkatra';
     padding: 10px;
@@ -581,14 +581,14 @@ body{
     margin: 0 20px;
 }
 .policy-text h3, .collab-text h3{
-    font-size: 25px;
+    font-size: 22px;
     font-family: 'Open sans';
     padding: 10px;
     color: white;
 }
 .policy-text p, .collab-text p{
     text-align: center;
-    font-size: 20px;
+    font-size: 17px;
     font-family: 'poppins';
     padding: 10px;
     color: whitesmoke;
@@ -700,7 +700,7 @@ body{
 }
 
 #team h2{
-    font-size: 45px;
+    font-size: 40px;
     font-family: 'alkatra';
     margin: 10px;
     padding: 10px;
@@ -708,7 +708,7 @@ body{
 }
 
 #team p{
-    font-size: 18px;
+    font-size: 17px;
     font-family: 'poppins';
     margin: 10px;
     padding: 10px;
@@ -742,14 +742,14 @@ body{
 }
 
 .profile-box h3{
-    font-size: 25px;
+    font-size: 22px;
     font-family: 'poppins';
     margin: 5px;
     padding: 5px;
 }
 
 .profile-box p{
-    font-size: 20px;
+    font-size: 17px;
     font-family: 'poppins';
     text-align: center;
     margin: 0px;
