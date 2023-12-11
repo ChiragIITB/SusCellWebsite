@@ -9,7 +9,7 @@ body{
     padding: 0;
     /* height: 100vh; */
     background: fixed;
-    background-image: url(images/main-background.png);
+    background-image: url(/images/main-background.png);
     background-size: cover;
     background-color: lightgray;
 }
