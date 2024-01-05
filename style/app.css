@@ -9,10 +9,12 @@ body{
     padding: 0;
     /* height: 100vh; */
     background: fixed;
-    background-image: url(../images/main-background.png);
+    background-image: url(../images/main-background.png) ;
     background-size: cover;
-    /* background-color: lightgray; */
 }
+
+
+
 
 
 
@@ -30,11 +32,12 @@ body{
 }
 
 .logo-image{
-    width: 200px;
+    width: 150px;
     padding: 10px;
     margin: 10px;
+    margin-top: 25px;
 }img{
-    width: 200px;
+    width: 150px;
 }
 
 .navbar{
@@ -48,7 +51,7 @@ body{
     flex: 1;
     text-decoration: none;
     color: white;
-    font-size: 17px;
+    font-size: 16px;
     font-family: 'poppins';
     text-align: center;
     margin: 5px;
@@ -62,17 +65,29 @@ body{
    margin-top: 5%;
 }
 .banner-box h1{
+    height: 60px;
+    width: 400px;
     font-size: 40px;
+    font-weight: 700;
     color: white;
     font-family: 'alkatra';
+    border-bottom: 3px solid white;
+    margin: 20px 0;
+    overflow: hidden;
+
+    animation-name: headerAnimate;
+    animation-duration: 1.5s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: 1;
 }
 .banner-box span{
     color: #FED049;
 }
 .banner-box p{
-    font-size: 18px;
+    font-size: 17px;
     font-family: 'inter';
     color: white;
+    transition-delay: 1.5s;
 }
 
 /* ..................hamburger nav for Mobile devices............ */
@@ -153,96 +168,151 @@ body{
     }
 }
 
+
+
+@keyframes headerAnimate {
+    from{
+        width: 0;
+        height: 0;
+    }
+
+    50%{
+        width: 400px;
+        height: 0;
+    }
+
+    to{
+        width: 400px;
+        height: 60px;
+    }
+    
+}
+
 /* ......................Home page styling ends........................ */
 
-/* ......................Styling for the About Us section............... */
+
+/* ................New Styling For About US............ */
+
 #aboutUs{
-    /* height: 100vh; */
-    background-color: whitesmoke;
-    box-shadow: 0 0 10px black;
-}
-
-
-.aboutUs-content{
     display: flex;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
+    height: 100vh;
+    /* background-color: rgba(15, 33, 57, 0.7); */
+    /* box-shadow: 0 0 10px black; */
 }
+
+.aboutUsContent{
+    display: flex;
+    justify-content: space-between;
+    width: 90%;
+    color: white;
+}
+
+
+.aboutUsContent h2{
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    width: 400px;
+
+    font-size: 40px;
+    font-family: 'poppins';
+    font-weight: 700;
+    margin: 10px;
+    padding: 10px;
+    overflow: hidden;
+}
+
+.aboutUsContent h2::before{
+    content: '';
+    height: 70px;
+    border: 5px solid white;
+    border-radius: 4px;
+    margin: 40px;
+}
+
+
+
+.aboutUsContent p{
+    text-align: justify;
+    width: 60%;
+    font-size: 18px;
+    margin: 5px;
+    padding: 10px;
+    border-bottom: 5px solid #4BC200;
+    border-radius: 5px;
+}
+
+/* ..............Animation for About Us Header............... */
+
+.headerAnimate-hide{    /* Class to hide the heading */
+    transform: translate(-100%);
+    transition: all;
+    transition-duration: 1s;
+    transition-timing-function: ease-in-out;
+}
+
+.headerAnimate-appear{
+    transform: translate(0);
+}
+
+
+
+
+/* ...............Cell Info Styling................ */
+
+
+.cellInfo{
+    height: 100vh;
+    width: 100%;
+    background-color: white;
+}
+
 
 .content-box{
     display: flex;
-    /* flex-wrap: wrap; */
-    justify-content: space-evenly;
-}
-
-.content{
-    width: 70%;
-    height: 50vh;
-    display: flex;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
-    /* margin: 10px; */
+    height: 33%;
+    width: 100%;
 }
 
-@media screen and (max-width : 1120){
-    .content{
-        height : auto;
-    }
-}
-
-
-.content{
-    flex-direction: column;
-    align-items:flex-start;
-    justify-content: center;
-}.content h3{
-    font-family: 'Alkatra';
+.content-box h3{
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    font-size: 25px;
+    font-family: 'Poppins';
     font-weight: 700;
-    font-size: 35px;
-    color:#1B6B93;
-}.content p{
-    font-family: 'poppins';
-    font-weight: 500;
-    font-size: 17px;
-    color:black;
-    /* background-color: rgba(7, 100, 171, 0.269); */
-    padding: 30px;
+    color: #0F2139;
+    margin: 10px;
+    padding: 5px;
+}
+
+.content-box h3::before{
+    content: '';
+    height: 60px ;
+    border: 4px solid #0F2139;
+    border-radius: 4px;
+    margin: 10px;
+    margin-right: 30px;
+}
+
+.content-box p{
+    text-align: justify;
+    width: 60%;
+    font-family: 'inter';
+    font-size: 16px;
+    color: #0F2139;
+    margin: 10px;
+    padding: 10px;
+    border: 5px solid #0F2139;
     border-radius: 5px;
-    /* box-shadow: 0 0 35px rgb(119, 136, 153); */
-    /* box-shadow: 0 0 60px rgb(49, 49, 49); */
 }
 
-.content h3, .content p{
-    /* padding: 5px; */
-    margin: 5px;
-    text-align: left;
-}
-
-.seperation{
-    width: 50%;
-    border: 3px solid gray;
-    border-radius: 5px;
-}
-
-.content h3{
-    padding-left: 30px;
-}
-@media screen and (max-width:1215px) {
-    .content{
-        width: 100%;
-        margin: 10px;
-    }
-
-    .content h3, .content p{
-        margin: 10px;
-        padding: 10px;
-    }
-
-    .content p{
-        font-size: 18px;
-        text-align: justify;
-    }
+.areaOfResp{
+    flex-direction: row-reverse;
 }
 
 /* ....................Events Styling.................... */
@@ -255,7 +325,7 @@ body{
 }
 
 .event-container{
-    background-color:#1B6B93;
+    background-color:#0f2139;
     display: flex;
     flex-direction: column;
     height: 100vh;
@@ -290,6 +360,7 @@ body{
     justify-content: center;
     text-align: justify;
     padding: 10px;
+    
 }
 
 .event-text h3::before{
@@ -300,18 +371,20 @@ body{
     width: 100px;
 }
 .event-text h3{
-    font-size: 30px;
-    font-family: 'alkatra';
+    font-size: 25px;
+    font-family: 'poppins';
     padding: 5px 45px;
     color: #A2FF86;
     margin: 10px 5px;
 }
 
 .event-text p{
-    font-size: 17px;
-    font-family: 'poppins';
+    font-size: 16px;
+    font-family: 'inter';
     padding: 5px 45px;
     color: whitesmoke;
+    /* border-bottom: 3px solid white;
+    border-radius: 3px; */
 }
 
 @media screen and (max-width: 1400px) {
@@ -366,117 +439,136 @@ body{
 
 
 /* .................Implementations Styling............... */
-
-
-#implementations{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+#implementation{
     height: 100vh;
-    background-color: rgba(0, 0, 0,0.4);
+    background-color: aqua;
 }
 
-#implementations h2{
-    font-size: 40px;
-    font-family: 'alkatra';
-    margin: 5px 50px;
-    padding: 10px 30px;
-    color: white;
-}
-  
 .imp-container{
+    height: 92vh;
     display: flex;
-    align-items: center;
-    height: 85vh;
-    overflow-x: scroll;
-    padding: 10px 30px;
-  }
-  
-  
-.impBox{
+    overflow-x:scroll;
+    background-color: white;
+    scroll-snap-type: mandatory;
+}
+
+.impH2{
     display: flex;
+    justify-content: center;
     align-items: center;
-    background-color:#0B8CB0;
-    height: 95%;
-    width: 40vw;
-    margin: 20px 45px;
-    /* border: 10px solid black; */
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.374);
+    height: 90vh;
+    min-width: 100vw;
+    background-color: white;
+}
+
+.impH2 h2{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+    font-family: 'Poppins';
+    font-weight: 700;
+    color: #0F2139;
+    padding: 10px;
+}
+.impH2 h2::before{
+    content: '';
+    height: 80px;
+    border: 4px solid #0F2139;
     border-radius: 5px;
-    padding: 5px;
-  }
-  
-  
+    margin:20px;
+}
+
+.impH2 img{
+    height: 100px;
+    margin: 20px;
+}
+
+.impBox{
+    height: 90vh;
+    background-color: white;
+    scroll-snap-align:start start ;
+}
+
+
 .imp-content{
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
+    justify-content: center;
     align-items: center;
-    text-align: justify;
-    height: 100%;
-    width: 40vw;
-    padding: 10px;
+    height: 90vh;
+    width: 50vw;
+    text-align: center;
 }
 
+
 .imp-content h3{
-    font-size: 25px;
-    font-family: 'Alkatra';
-    color: #A2FF86;
+    font-size: 20px;
+    font-family: 'poppins';
+    color: #0F2139;
+    font-weight: 500;
+    border-bottom: 3px solid #0F2139;
     padding: 10px;
-    margin: 5px;
+    margin: 10px;
 }
 
 .imp-content img{
-    max-height: 45%;
-    width: auto;
-    max-width: 90%;
-    margin: 5px;
+    width: 75%;
+    max-height: 45vh;
+    flex: 1;
     border-radius: 5px;
-    aspect-ratio:preserve;
 }
 
 .imp-content p{
-    display: flex;
-    align-items: center;
-    font-size: 17px;
-    font-family: 'poppins';
-    color: whitesmoke;
-    height: 45%;
-    margin: 5px;
+    text-align: justify;
     padding: 10px;
+    margin: 10px;
+    width: 80%;
+    font-size: 16px;
+    font-family: 'inter';
+    color: #0F2139;
 }
 
-
-  
-                       /* ......................Scroll bar Styling................ */
-  
-  .imp-container::-webkit-scrollbar{
-    height: 10px;
-  }
-  
-  .imp-container::-webkit-scrollbar-track-piece{
-    background-color: gray;
-    border-radius: 10px;
-    margin: 500px;
+.impBox:nth-child(2n){
+    background-color: #0F2139;
+}.impBox:nth-child(2n) .imp-content h3, .impBox:nth-child(2n) .imp-content p{
+    color: white;
+}.impBox:nth-child(2n) .imp-content h3{
+    border-bottom: 3px solid white;
+}
     
-  }
+
+
+
+                     /* ......................Scroll bar Styling................ */
+
+   .imp-container::-webkit-scrollbar{
+   height: 15px;
+}
+                      
+ .imp-container::-webkit-scrollbar-track-piece{
+   background-color: lightgray;
+   border-radius: 10px;
+   border: 5px solid #0F2139;
+   margin: 400px;
+                       
+}
+                      
+ .imp-container::-webkit-scrollbar-track{
+   border-radius: 10px;
+ }
   
-  .imp-container::-webkit-scrollbar-track{
-    /* background-color: rgba(0, 0, 0,1); */
-    /* opacity: 0; */
-    border-radius: 10px;
-  }
-  
-  .imp-container::-webkit-scrollbar-thumb{
-    background-color:#0B8CB0;
-    border-radius: 10px;
-  }
-  
-  
-  .imp-container::-webkit-scrollbar-button{
-    background-color: white;
-    width: 0px;
-  }
+ .imp-container::-webkit-scrollbar-thumb{
+  background-color:#0f2139;
+  border-radius: 10px;
+ }
+                      
+                      
+.imp-container::-webkit-scrollbar-button{
+  background-color: white;
+  width: 0px;
+}
+              
 
 
 @media screen and (max-width: 1215px) {
@@ -544,9 +636,12 @@ body{
 }
 
 
+
+
+
 /* .................Policy Styling.......................... */
 
-#policy{
+/* #policy{
     height: 100vh;
     background-color: #0B8CB0;
     display: flex;
@@ -599,60 +694,138 @@ body{
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
-    /* border: 5px solid black; */
-    /* border-radius: 5px; */
+} */
+
+#policy{
+    height: 90vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap-reverse;
 }
 
-@media screen and (max-width: 1215px) {
-    #policy{
-        height: auto;
-        display: flex;
-        flex-direction: column;
-    }
-    .policy-image{
-        height: 45vh;
-        width: 100%;
-        margin: 10px;
-    }
-    .policy-text{
-        width: 95vw;
-        height: 45vh;
-    }
-    .policy-text h2, .policy-text h3, .policy-text p{
-        text-align:justify;
-    }
+.policy-text, .policy-image{
+    height: 100%;
+    width: 50%;
 }
+
+.policy-text{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #0F2139;
+}
+.policy-text h2{
+    color: white;
+    font-size: 30px;
+    font-weight: 700;
+    font-family: 'poppins';
+    margin: 10px;
+    padding: 10px;
+
+}
+.policy-text h2::before{
+    content: '';
+    height: 80px;
+    border: 4px solid white;
+    border-radius: 4px;
+    margin: 30px;
+}
+.policy-text h3{
+    color: white;
+    font-size: 20px;
+    font-family: 'inter';
+    margin: 5px ;
+    padding: 5px;
+}
+.policy-text p{
+    color: white;
+    font-family: 'inter';
+    font-size: 16px;
+    text-align: center;
+    margin: 10px;
+    padding: 10px;
+}
+
+
+.policy-image{
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: #0F2139;
+}
+
+
+
 
 
 /* ...................Collaborations Styling.................... */
 
 #collaborations{
-    height: 100vh;
+    height: 90vh;
     display: flex;
+    flex-direction: column;
+    justify-content:space-evenly;
     align-items: center;
-    background-color:#0B8CB0;
+    background-color: white;
 }
-.collab-image, .collab-text{
+
+.collab h2{
+    font-family: 'poppins';
+    font-size: 35px;
+    font-weight: 700;
+    color: #0F2139;
+    padding: 10px;
+}
+.collab h2::before{
+    content: '';
+    height: 100px;
+    border: 4px solid #0F2139;
+    border-radius: 4px;
+    margin: 20px;
+}
+
+.collab hr{
+    width: 50%;
+}
+.collab-content{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.collab-head, .collab-text{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
     height: 100%;
     width: 50%;
 }
-
 .collab-image{
-    background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
+    height: 200px;
+    width: 300px;
+    /* border: 5px solid black; */
+}
+
+.collab-head h3{
+    font-size: 30px;
+    font-family: 'Poppins';
+    color: #0F2139;
 }
 
 .collab-text p{
-    height: 100px;
+    width: 90%;
+    font-size: 16px;
+    color: #0F2139;
+    font-family: 'inter';
     text-align: justify;
-    overflow: hidden;
-    border-bottom: 3px solid black;
-    transition: all 1s;
-}
-
-.collab-text p:hover{
-    height: 70vh;
+    padding: 10px;
+    margin: 10px;
+    border-bottom: 3px solid #0F2139;
 }
 
 @media screen and (max-width : 1215px) {
@@ -696,23 +869,37 @@ body{
     flex-direction: column;
     align-items: center;
     height: auto;
-    background-color:#279EFF;
+    background-color:#0F2139;
 }
 
 #team h2{
-    font-size: 40px;
-    font-family: 'alkatra';
+    font-size: 35px;
+    font-family: 'poppins';
     margin: 10px;
     padding: 10px;
     color: white;
 }
+#team h2::before{
+    content: '';
+    height: 80px;
+    border: 4px solid white;
+    border-radius: 4px;
+    margin: 20px;
 
-#team p{
-    font-size: 17px;
+}
+#team hr{
+    color: white;
+    width: 50%;
+}
+
+.teamInfoText{
+    font-size: 16px;
     font-family: 'poppins';
     margin: 10px;
     padding: 10px;
     text-align: justify;
+    max-width: 75%;
+    color: white;
 }
 
 .profiles{
@@ -721,6 +908,7 @@ body{
     align-items: center;
     flex-wrap: wrap;
     width: 95%;
+    margin: 10px;
 }
 
 .profile-box{
@@ -728,42 +916,41 @@ body{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 450px;
-    width: 350px;
+    height: 375px;
+    width: 300px;
     background-color: white;
-    margin: 20px;
+    margin: 30px;
     border-radius: 5px;
 }
 
 .profile-box img{
-    height: 210px;
-    width: 210px;
+    height: 200px;
+    width: 200px;
     border-radius: 105px;
 }
 
 .profile-box h3{
-    font-size: 22px;
+    font-size: 20px;
     font-family: 'poppins';
     margin: 5px;
     padding: 5px;
 }
 
 .profile-box p{
-    font-size: 17px;
+    font-size: 16px;
     font-family: 'poppins';
     text-align: center;
     margin: 0px;
-    padding: 0px;
+    padding: 10px;
 }
 
 
 
 /* ........................footer.................... */
 
-footer{
-    height: 40vh;
-}
+
 .contact-container{
+    height: 35vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -773,22 +960,33 @@ footer{
 }
 
 .contact-content{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
     width: 80%;
 }
 .contact-content h2{
-    font-family: 'alkatra';
-    font-size: 45px;
+    font-family: 'poppins';
+    font-size: 30px;
+    font-weight: 700;
     text-align: center;
+    /* color: #ff9d00; */
+    color: #0F2139;
+}
+.contact-content h2::before{
+    content: '';
+    height: 100px;
+    border: 4px solid #0F2139;
+    border-radius: 4px;
+    margin: 20px;
 }
 
-.contact-content li{
-    font-size: 20px;
-    font-family: 'poppins';
+.contact-content p{
+    font-size: 18px;
+    font-family: 'inter';
     padding: 10px;
+    margin: 10px;
     line-height: 2rem;
-}
-.contact-content li:nth-of-type(1){
-    border-bottom: 2px solid lightgray;
 }
 
 .links-container{
@@ -797,13 +995,13 @@ footer{
     justify-content: center;
     align-items: center;
     text-align: center;
-    height: 30vh;
+    height: 35vh;
     background-color: rgb(52, 52, 52);
 }
 
 .links-content{
     color: white;
-    font-size: 20px;
+    font-size: 16px;
     font-family: 'poppins';
     padding: 10px;
 }
@@ -817,17 +1015,20 @@ footer{
     height: 60px;
     margin: 10px;
     padding: 5px;
+    background-color: white;
+    border-radius: 50%;
 }
 
 
 
 /* ..............Animations CSS................. */
 
+
 .hidden{
     opacity: 0;
     filter: blur(3px);
     transform: translateX(-25%);
-    transition: all 1s 200ms;
+    transition: all 0.8s 0ms;
 }
 
 
@@ -842,6 +1043,17 @@ footer{
     filter: blur(0);
     transform: translateX(0);
 }
+
+
+/* @keyframes sideAnimate{
+    from{
+        transform:translate(-100%);
+    }
+
+    to{
+        transform: translate(0);
+    }
+} */
 
 
 
@@ -861,13 +1073,8 @@ footer{
         max-width: fit-content;
         border-top: 1px solid black;
     }
-    #aboutUs, .content{
+    .content{
         height: auto;
     }   
 }
 
-
-/* 
-*{
-    background-color: white;
-} */
