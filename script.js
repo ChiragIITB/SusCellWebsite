@@ -45,7 +45,7 @@ window.addEventListener('scroll', () => {
     let ratio = window.scrollY / pageHeight ;
 
     if(ratio<=2){
-        document.body.style.backgroundImage = `linear-gradient(to right, rgba(15, 33, 57, ${0.8*ratio}), rgba(15, 33, 57, ${0.8*ratio})), url(../images/main-background.png)` ;
+        document.body.style.backgroundImage = `linear-gradient(to right, rgba(15, 33, 57, ${0.8*ratio}), rgba(15, 33, 57, ${0.8*ratio})), url(images/main-background.png)` ;
     }
 
     else if(ratio>2){
