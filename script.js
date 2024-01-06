@@ -49,7 +49,7 @@ window.addEventListener('scroll', () => {
     }
 
     else if(ratio>2){
-        document.body.style.backgroundImage = `url(../images/main-background.png)`
+        document.body.style.backgroundImage = `url(images/main-background.png)`
     }
 })
 
