@@ -1,19 +1,22 @@
 
-
-
-
 // .............loader script
 
-document.onreadystatechange =  function(){
-    if(document.readyState !== "complete"){
-        document.querySelector('body').style.visibility = 'hidden';
-        document.querySelector('.loader').style.visibility = 'visible';
+addEventListener('DOMContentLoaded',() => {
+
+    setTimeout(() => {
+        hideLoader();
+        showBody();
+    }, 2000)
+
+    function hideLoader(){
+        const loader = document.querySelector('.loader');
+        loader.style.display = "none";
     }
-    else{
-        document.querySelector('body').style.visibility = 'visible';
-        document.querySelector('.loader').style.display = 'none';
-    }
-}
+    function showBody(){
+        const bodyContent = document.querySelector('.body-content');
+        bodyContent.style.display = "block";    }
+})
+
 
 
 
@@ -26,9 +29,10 @@ const observer = new IntersectionObserver((entries) => {
         console.log(entry)
         if(entry.isIntersecting){
             entry.target.classList.add('show');
-        } else{
-            entry.target.classList.remove('show');
-        }
+        } 
+        // else{
+        //     entry.target.classList.remove('show');
+        // }
     });
 });
 
@@ -66,29 +70,13 @@ window.addEventListener('scroll', () => {
     let ratio = window.scrollY / pageHeight ;
 
     if(ratio<=2){
-        document.body.style.backgroundImage = `linear-gradient(to right, rgba(15, 33, 57, ${0.8*ratio}), rgba(15, 33, 57, ${0.8*ratio})), url(images/main-background.png)` ;
+        document.body.style.backgroundImage = `linear-gradient(to right, rgba(80, 124, 158, ${1.1*ratio}), rgba(80, 124, 158, ${1.1*ratio})), url(../images/main-background.png)` ;
     }
 
     else if(ratio>2){
-        document.body.style.backgroundImage = `url(images/main-background.png)`
+        document.body.style.backgroundImage = `url(images/main-background.png)`;
     }
 })
 
 
 
-
-// ...............About Us Header Animate
-
-const header = document.querySelectorAll('.headerAnimate-hide');
-
-
-const headerObserver = new IntersectionObserver((entries) => {
-    entries.forEach((entry) => {
-        console.log(entry)
-        if(entry.isIntersecting){
-            entry.target.classList.add('headerAnimate-appear');
-        }
-    });
-});
-
-header.forEach((el) => headerObserver.observe(el));
