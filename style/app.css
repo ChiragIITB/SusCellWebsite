@@ -4,34 +4,45 @@
     padding: 0%;
 }
 
+
 .loader{
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
-    width: 100vw;
     background-color: #0F2139;
 }
 
+.loader img{
+    height: 250px;
+    width: 250px;
+    margin: 0;
+}
+
+
+
 body{
-    /* background-color: black; */
     margin: 0;
     padding: 0;
-    /* height: 100vh; */
-    background: fixed;
+    background-attachment: fixed;
     background-image: url(../images/main-background.png) ;
     background-size: cover;
 }
 
+.body-content{
+    display: none;
+}
 
 
+
+/* .....Logo Blue  -  #76B9F0   rgb(118, 185, 240) */
+/* .....Logo Green -  #9DCD5A   rgb(157, 205, 90)  */
 
 
 
 /* ............................Home styling................... */
 
 #home{
-    
     height: 100vh;
 }
 
@@ -42,12 +53,12 @@ body{
 }
 
 .logo-image{
-    width: 150px;
-    padding: 10px;
     margin: 10px;
-    margin-top: 25px;
 }img{
-    width: 150px;
+    width: 135px;
+    height: 135px;
+    padding: 10px;
+    margin-left: 15px;
 }
 
 .navbar{
@@ -58,29 +69,29 @@ body{
     width: auto;
 }
 .navbar a{
-    flex: 1;
+    /* flex: 1; */
     text-decoration: none;
     color: white;
     font-size: 16px;
     font-family: 'poppins';
     text-align: center;
-    margin: 5px;
-    padding: 5px;
+    margin: 10px;
+    padding: 10px;
 }
 .banner-box{
    max-width: 50%;
    margin: 10px;
    padding: 10px;
-   margin-left: 3%;
+   margin-left: 5%;
    margin-top: 5%;
 }
 .banner-box h1{
-    height: 60px;
-    width: 400px;
-    font-size: 40px;
+    height: 85px;
+    width: 500px;
+    font-size: 50px;
     font-weight: 700;
     color: white;
-    font-family: 'alkatra';
+    font-family: 'poppins';
     border-bottom: 3px solid white;
     margin: 20px 0;
     overflow: hidden;
@@ -96,8 +107,18 @@ body{
 .banner-box p{
     font-size: 17px;
     font-family: 'inter';
+   
     color: white;
     transition-delay: 1.5s;
+}
+
+
+@media screen and (max-width: 550px) {
+    .banner-box h1{
+        width: auto;
+        height: auto;
+        font-size: 40px;
+    }
 }
 
 /* ..................hamburger nav for Mobile devices............ */
@@ -187,13 +208,13 @@ body{
     }
 
     50%{
-        width: 400px;
+        width: 500px;
         height: 0;
     }
 
     to{
-        width: 400px;
-        height: 60px;
+        width: 500px;
+        height: 85px;
     }
     
 }
@@ -214,9 +235,12 @@ body{
 
 .aboutUsContent{
     display: flex;
-    justify-content: space-between;
-    width: 90%;
-    color: white;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    /* height: 60%; */
+    width: 100%;
+    color: #0F2139;
 }
 
 
@@ -226,7 +250,7 @@ body{
     align-items: center;
     width: 400px;
 
-    font-size: 40px;
+    font-size: 45px;
     font-family: 'poppins';
     font-weight: 700;
     margin: 10px;
@@ -247,16 +271,22 @@ body{
 .aboutUsContent p{
     text-align: justify;
     width: 60%;
-    font-size: 18px;
+    font-size: 20px;
     margin: 5px;
     padding: 10px;
     border-bottom: 5px solid #4BC200;
     border-radius: 5px;
 }
 
-/* ..............Animation for About Us Header............... */
+@media screen and (max-width: 1100px ) {
+    .aboutUsContent p{
+        width: 90%;
+    }
+}
 
-.headerAnimate-hide{    /* Class to hide the heading */
+/* ..............Animation for About Us Header............... */
+/* 
+.headerAnimate-hide{    
     transform: translate(-100%);
     transition: all;
     transition-duration: 1s;
@@ -266,7 +296,7 @@ body{
 .headerAnimate-appear{
     transform: translate(0);
 }
-
+ */
 
 
 
@@ -276,7 +306,7 @@ body{
 .cellInfo{
     height: 100vh;
     width: 100%;
-    background-color: white;
+    background-color: #DFEFFB;
 }
 
 
@@ -317,13 +347,29 @@ body{
     color: #0F2139;
     margin: 10px;
     padding: 10px;
-    border: 5px solid #0F2139;
+    border-bottom: 5px solid #0F2139;
     border-radius: 5px;
 }
 
 .areaOfResp{
     flex-direction: row-reverse;
 }
+
+@media screen and (max-width: 1100px) {
+    .cellInfo{
+        height: auto;
+    }
+    .content-box{
+        height: auto;
+        flex-direction: column;
+        padding: 10px;
+    }
+
+    .content-box p{
+        width: 80%;
+    }
+}
+
 
 /* ....................Events Styling.................... */
 
@@ -459,7 +505,6 @@ body{
     display: flex;
     overflow-x:scroll;
     background-color: white;
-    scroll-snap-type: mandatory;
 }
 
 .impH2{
@@ -497,7 +542,7 @@ body{
 .impBox{
     height: 90vh;
     background-color: white;
-    scroll-snap-align:start start ;
+
 }
 
 
@@ -651,61 +696,6 @@ body{
 
 /* .................Policy Styling.......................... */
 
-/* #policy{
-    height: 100vh;
-    background-color: #0B8CB0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-bottom: 5px solid black;
-}
-
-.policy-text, .policy-image{
-    height: 100%;
-    width: 50%;
-}
-
-.policy-text, .collab-text{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    margin: 10px ;
-    padding: 10px;
-}
-.policy-text h2, .collab-text h2{
-    font-size: 40px;
-    color: #A2FF86;
-    font-family: 'alkatra';
-    padding: 10px;
-}.policy-text h2::before, .collab-text h2::before{
-    content: '';
-    height: 20px;
-    border: 2px solid white;
-    border-radius: 5px;
-    margin: 0 20px;
-}
-.policy-text h3, .collab-text h3{
-    font-size: 22px;
-    font-family: 'Open sans';
-    padding: 10px;
-    color: white;
-}
-.policy-text p, .collab-text p{
-    text-align: center;
-    font-size: 17px;
-    font-family: 'poppins';
-    padding: 10px;
-    color: whitesmoke;
-}
-
-
-.policy-image{
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
-} */
-
 #policy{
     height: 90vh;
     display: flex;
@@ -766,7 +756,19 @@ body{
     background-color: #0F2139;
 }
 
-
+@media screen and (max-width: 1215px) {
+    #policy{
+        height: auto;
+        background-color: #0F2139;
+        flex-direction: column-reverse;
+        flex-wrap: nowrap;
+        padding: 30px;
+    }
+    .policy-image, .policy-text{
+        min-height: 400px;
+        width: 100%;
+    }
+}
 
 
 
@@ -809,6 +811,7 @@ body{
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
+    flex-wrap: wrap;
     align-items: center;
     height: 100%;
     width: 50%;
@@ -837,21 +840,30 @@ body{
     margin: 10px;
     border-bottom: 3px solid #0F2139;
 }
+br{
+    color: black;
+    height: 100px;
+}
 
 @media screen and (max-width : 1215px) {
     #collaborations{
         height: auto;
         flex-direction: column;
+        padding: 20px;
     }
-    .collab-image{
-        height: 40vh;
-        width: 50vw;
+}
+
+@media screen and (max-width : 1100px) {
+    .collab-content{
+        flex-direction: column;
+    }
+    .collab-head{
+        width: 100%;
+        flex-direction: row;
+        text-align: center;
     }
     .collab-text{
-        width: 95vw;
-    }
-    .collab-text p:hover{
-        height: 65vh;
+        width: 100%;
     }
 }
 
@@ -1027,6 +1039,14 @@ body{
     padding: 5px;
     background-color: white;
     border-radius: 50%;
+}
+
+
+
+@media screen and (max-width: 550px) {
+    .contact-content{
+        flex-direction: column;
+    }
 }
 
 
