@@ -1,16 +1,27 @@
+
 *{
     line-height: 1.5em;
     margin: 0%;
     padding: 0%;
+    scroll-behavior: smooth;
 }
 
+@font-face {
+    font-family: avocadoReg;
+    src: url(../My_Fonts/AvocadoFontFamily/Regular/Avocado\ Sans\ Regular.ttf);
+}
+@font-face{
+    font-family: avocadoBold;
+    src: url(../My_Fonts/AvocadoFontFamily/Bold/Avocado\ Sans\ Bold.ttf);
+    font-weight: bold;
+}
 
 .loader{
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
-    background-color: #0F2139;
+    background-color: black;
 }
 
 .loader img{
@@ -25,15 +36,24 @@ body{
     margin: 0;
     padding: 0;
     background-attachment: fixed;
-    background-image: url(../images/main-background.png) ;
+    background-position: center;
+    background-image: url(../images/main-background.webp) ;
     background-size: cover;
+    overflow-x:hidden;
 }
 
 .body-content{
     display: none;
+    height: 100vh;
+    overflow-y: auto;
+    overflow-x: hidden;
+    scroll-snap-type: y mandatory;
+    scroll-behavior: smooth;
 }
 
-
+#home, #aboutUs, .cellInfo, #events, #implementations, #policy, #collaborations, #team, #footer{
+    scroll-snap-align: start;
+}
 
 /* .....Logo Blue  -  #76B9F0   rgb(118, 185, 240) */
 /* .....Logo Green -  #9DCD5A   rgb(157, 205, 90)  */
@@ -52,14 +72,13 @@ body{
 
 }
 
-.logo-image{
-    margin: 10px;
-}img{
+.logo-image img{
     width: 135px;
     height: 135px;
     padding: 10px;
     margin-left: 15px;
 }
+
 
 .navbar{
     height: 150px;
@@ -69,7 +88,6 @@ body{
     width: auto;
 }
 .navbar a{
-    /* flex: 1; */
     text-decoration: none;
     color: white;
     font-size: 16px;
@@ -78,6 +96,10 @@ body{
     margin: 10px;
     padding: 10px;
 }
+.navbar a:hover{
+    color:#B6D38E;
+}
+
 .banner-box{
    max-width: 50%;
    margin: 10px;
@@ -86,14 +108,16 @@ body{
    margin-top: 5%;
 }
 .banner-box h1{
-    height: 85px;
-    width: 500px;
-    font-size: 50px;
+
+    font-size: 65px;
     font-weight: 700;
     color: white;
     font-family: 'poppins';
-    border-bottom: 3px solid white;
+    /* letter-spacing: 1px; */
+    border-bottom: 8px solid white;
     margin: 20px 0;
+    width: 600px;
+    height: 100px;
     overflow: hidden;
 
     animation-name: headerAnimate;
@@ -105,20 +129,62 @@ body{
     color: #FED049;
 }
 .banner-box p{
-    font-size: 17px;
-    font-family: 'inter';
+    font-size: 25px;
+    font-weight: 300;
+    line-height: 28px;
+    font-family: 'poppins';
+    text-align: left;
+    padding: 5px 0;
    
     color: white;
     transition-delay: 1.5s;
 }
 
 
+@keyframes headerAnimate {
+    from{
+        width: 0;
+        height: 0;
+    }
+
+    50%{
+        width: 600px;
+        height: 0;
+    }
+
+    to{
+        width: 600px;
+        height: 100px;
+    }
+    
+}
+
+
+
 @media screen and (max-width: 550px) {
     .banner-box h1{
-        width: auto;
-        height: auto;
+        width: 375px;
+        height: 65px;
         font-size: 40px;
     }
+    @keyframes headerAnimate {
+        from{
+            width: 0;
+            height: 0;
+        }
+    
+        50%{
+            width: 375px;
+            height: 0;
+        }
+    
+        to{
+            width: 375px;
+            height: 65px;
+        }
+        
+    }
+
 }
 
 /* ..................hamburger nav for Mobile devices............ */
@@ -185,12 +251,12 @@ body{
     background-color: rgba(0, 0, 0,1);
     border-radius: 5px;
 }
-@media screen and (min-width: 800px) {
+@media screen and (min-width: 845px) {
     .hamburger, .mobile-nav{
         display: none;
     }
 }
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 845px) {
     .nav-container .navbar{
         display: none;
     }
@@ -199,28 +265,21 @@ body{
     }
 }
 
-
-
-@keyframes headerAnimate {
-    from{
-        width: 0;
-        height: 0;
-    }
-
-    50%{
-        width: 500px;
-        height: 0;
-    }
-
-    to{
-        width: 500px;
-        height: 85px;
-    }
-    
+/* 
+.comp-Link{
+    margin-top: 2%;
+    margin-left: 6%;   
 }
 
-/* ......................Home page styling ends........................ */
+.comp-Link a{
+    font-size: 20px;
+    font-family: 'poppins';
+    color: rgb(255, 255, 153);
+} */
 
+
+
+/* ......................Home page styling ends........................ */
 
 /* ................New Styling For About US............ */
 
@@ -238,9 +297,10 @@ body{
     flex-direction: column;
     align-items: center;
     justify-content: space-evenly;
-    /* height: 60%; */
+    height: 70%;
     width: 100%;
-    color: #0F2139;
+    color: #283E4F;
+    padding: 15px;
 }
 
 
@@ -248,39 +308,54 @@ body{
     display: flex;
     justify-content: left;
     align-items: center;
-    width: 400px;
-
-    font-size: 45px;
-    font-family: 'poppins';
+    
+    font-size: 70px;
+    font-family: avocadoBold;
     font-weight: 700;
     margin: 10px;
     padding: 10px;
-    overflow: hidden;
 }
 
-.aboutUsContent h2::before{
+/* .aboutUsContent h2::before{
     content: '';
-    height: 70px;
-    border: 5px solid white;
-    border-radius: 4px;
+    height: 80px;
+    border: 10px solid #283E4F;
+    border-radius: 10px;
     margin: 40px;
-}
+} */
 
 
 
 .aboutUsContent p{
     text-align: justify;
     width: 60%;
-    font-size: 20px;
+    font-size: 18px;
+    line-height: 30px;
+    font-family: 'poppins';
     margin: 5px;
     padding: 10px;
-    border-bottom: 5px solid #4BC200;
+    border-bottom: 5px solid #283E4F;
     border-radius: 5px;
 }
 
 @media screen and (max-width: 1100px ) {
     .aboutUsContent p{
         width: 90%;
+    }
+}
+@media screen and (max-width: 460px) {
+
+    .aboutUsContent h2{
+        font-size: 35px;
+        justify-content: center;
+    }
+    .aboutUsContent h2::before{
+        margin: 20px;
+        height: 50px;
+    }
+    .aboutUsContent p{
+        width: 95%;
+        font-size: 18px;
     }
 }
 
@@ -306,13 +381,14 @@ body{
 .cellInfo{
     height: 100vh;
     width: 100%;
-    background-color: #DFEFFB;
+
 }
+
 
 
 .content-box{
     display: flex;
-    justify-content: space-around;
+    justify-content: space-evenly;
     align-items: center;
     height: 33%;
     width: 100%;
@@ -322,39 +398,53 @@ body{
     display: flex;
     justify-content:center;
     align-items: center;
-    font-size: 25px;
-    font-family: 'Poppins';
+    font-size: 35px;
+    letter-spacing: 2px;
+    font-family: avocadoReg;
     font-weight: 700;
-    color: #0F2139;
+    color:  #364226;
     margin: 10px;
     padding: 5px;
 }
 
-.content-box h3::before{
+/* .content-box h3::before{
     content: '';
     height: 60px ;
-    border: 4px solid #0F2139;
+    border: 4px solid #364226;
     border-radius: 4px;
     margin: 10px;
     margin-right: 30px;
-}
+} */
 
-.content-box p{
+.content-box ul{
     text-align: justify;
-    width: 60%;
-    font-family: 'inter';
+    width: 65%;
+    font-family: 'poppins';
     font-size: 16px;
-    color: #0F2139;
+    color: #283E4F;
     margin: 10px;
     padding: 10px;
-    border-bottom: 5px solid #0F2139;
-    border-radius: 5px;
+    /* border-bottom: 5px solid #283E4F; */
+    /* border-radius: 5px; */
+}
+
+.content-box ul li{
+    margin: 5px;
+    padding: 5px;
+}
+
+.workDomains{
+    background-color: #B2D8F5;
 }
 
 .areaOfResp{
-    flex-direction: row-reverse;
+    /* flex-direction: row-reverse; */
+    background-color: #C1DFF7;
 }
 
+.ScaleOfImp{
+    background-color: #D0E7F9;
+}
 @media screen and (max-width: 1100px) {
     .cellInfo{
         height: auto;
@@ -362,85 +452,125 @@ body{
     .content-box{
         height: auto;
         flex-direction: column;
-        padding: 10px;
+        /* padding: 10px; */
     }
 
-    .content-box p{
-        width: 80%;
+    .content-box ul{
+        width: 75%;
+    }
+}
+@media screen and (max-width: 500px) {
+    .cellInfo{
+        height: auto;
+    }
+    .content-box{
+        height: auto;
+        width: 100%;
+        flex-direction: column;
+        padding: 30px 15px;
+    }
+
+    .content-box ul{
+        width: 90%;
     }
 }
 
 
-/* ....................Events Styling.................... */
+/* ...........Events Styling */
 
 
-#events{
-    /* height: 200vh; */
+.eventHeader{
+    position: sticky;
+    top: 0;
+    z-index: -5;
     display: flex;
-    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    width: 100%;
+    /* background-color: #6ba6d2; */
+}
+.eventHeader h2{
+    font-size:70px;
+    font-weight: 700;
+    font-family: avocadoBold;
+    color: #283E4F;
 }
 
 .event-container{
-    background-color:#0f2139;
     display: flex;
-    flex-direction: column;
-    height: 100vh;
-    width: 100%;
-}
-
-.event-container .event{
-    display: flex;
+    height: 50vh;
+    justify-content: space-around;
     align-items: center;
-    height: 50%;
-    width: 100%;
-    /* box-shadow: 0 0 25px black; */
-    margin: 30px 0;
+    /* background-color:#6ba6d2; */
 }
 
-
-.event-image, .event-text{
-    width: 50%;
+.event{
+    position: relative; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
     height: 100%;
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
-    margin: 10px;
-    border-radius: 5px;
 }
 
-
-
-.event-text {
+.event-image{
+    z-index: 5;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    text-align: justify;
-    padding: 10px;
+    align-items: center;
+    width: 400px;
+    height: 90%;
+    border-radius: 20px;
     
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: bottom;
+    background-color: #364e60c7;
+    background-blend-mode: multiply;
+
+    transition-property: all;
+    transition-duration: 200ms;
+}
+.event-image:hover{
+    cursor: pointer;
+    box-shadow: 0 0 20px #202b32c7;
 }
 
-.event-text h3::before{
-    content: '';
-    margin-right: 15px;
-    border: 2px solid lightgray;
-    border-radius: 5px;
-    width: 100px;
-}
-.event-text h3{
-    font-size: 25px;
+.event-image h3{
+    font-size: 35px;
     font-family: 'poppins';
     padding: 5px 45px;
-    color: #A2FF86;
-    margin: 10px 5px;
+    color: #B6D38E;
+    text-align: center;
+    text-wrap: wrap;
 }
 
+.event-text {
+    z-index: -1;
+    opacity: 0;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: justify;
+    width: 100%;
+    height: 100%;
+    padding: 10px;
+
+
+    transition-property: opacity;
+    transition-duration: 500ms;
+}
+
+
 .event-text p{
-    font-size: 16px;
+    font-size: 17px;
     font-family: 'inter';
-    padding: 5px 45px;
-    color: whitesmoke;
-    /* border-bottom: 3px solid white;
-    border-radius: 3px; */
+    padding: 5px 10px;
+    color: #283E4F;
 }
 
 @media screen and (max-width: 1400px) {
@@ -469,10 +599,15 @@ body{
     }
     .event-image, .event-text{
         height: 40vh;
-        width: 90vw;
+        /* width: 90vw; */
     }
 }
 
+@media screen and (max-width:940px) {
+    .event-container{
+        flex-wrap: wrap;
+    }
+}
 @media screen and (max-width: 560px) {
     .event-container{
         justify-content: center;
@@ -495,71 +630,75 @@ body{
 
 
 /* .................Implementations Styling............... */
-#implementation{
+
+#implementations{
     height: 100vh;
-    background-color: aqua;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#implementations button{
+    position: relative;
+    font-size: 70px;
+    font-weight: 900;
+    color: #283E4F;
+    border:none;
+    border-radius: 20px;
+    background-color: transparent;
+    height: 90%;
+    width: 20%;
+    margin: 10px;
+}
+#implementations button:hover{
+    background-color: rgba(255, 255, 255, 0.08);
+    cursor: pointer;
 }
 
 .imp-container{
-    height: 92vh;
+    width: 50%;
     display: flex;
+    scroll-snap-type: x mandatory;
     overflow-x:scroll;
-    background-color: white;
+    background-color: #C0D99C;
+    border-radius: 20px;
+    box-shadow: 0px 0px 50px #507C9E;
 }
 
 .impH2{
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 90vh;
-    min-width: 100vw;
-    background-color: white;
+    min-width: 50vw;
 }
 
 .impH2 h2{
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 30px;
-    font-family: 'Poppins';
+    font-size: 70px;
+    font-family: avocadoBold;
     font-weight: 700;
-    color: #0F2139;
+    color: #283E4F;
     padding: 10px;
 }
-.impH2 h2::before{
-    content: '';
-    height: 80px;
-    border: 4px solid #0F2139;
-    border-radius: 5px;
-    margin:20px;
-}
 
-.impH2 img{
-    height: 100px;
-    margin: 20px;
-}
 
 .impBox{
-    height: 90vh;
-    background-color: white;
-
-}
-
-
-.imp-content{
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 90vh;
-    width: 50vw;
     text-align: center;
+    height: 90vh;
+    min-width: 50vw;
+    scroll-snap-align: center;
 }
 
 
-.imp-content h3{
-    font-size: 20px;
-    font-family: 'poppins';
+.impBox h3{
+    font-size: 30px;
+    font-family: 'avocadoReg';
     color: #0F2139;
     font-weight: 500;
     border-bottom: 3px solid #0F2139;
@@ -567,131 +706,47 @@ body{
     margin: 10px;
 }
 
-.imp-content img{
-    width: 75%;
+.impBox img{
+    width: 60%;
     max-height: 45vh;
     flex: 1;
-    border-radius: 5px;
+    border-radius: 20px;
+    /* box-shadow: 0 0 30px #485833; */
 }
 
-.imp-content p{
+.impBox p{
     text-align: justify;
-    padding: 10px;
+    padding: 2% 5%;
     margin: 10px;
-    width: 80%;
     font-size: 16px;
-    font-family: 'inter';
+    font-family: 'poppins';
     color: #0F2139;
+    line-height: 25px;
 }
 
-.impBox:nth-child(2n){
-    background-color: #0F2139;
-}.impBox:nth-child(2n) .imp-content h3, .impBox:nth-child(2n) .imp-content p{
-    color: white;
-}.impBox:nth-child(2n) .imp-content h3{
-    border-bottom: 3px solid white;
+
+@media screen and (max-width: 1000px) {
+    .imp-container{
+        height: auto;
+        width: 80%;
+    }
+    .impBox{
+            min-width: 80vw;
+    }
 }
+
+@media screen and (max-width: 460px) {
+    .impBox p{
+        text-align: justify ;
+    }
+}
+
     
-
-
-
-                     /* ......................Scroll bar Styling................ */
+/* ......................Scroll bar Styling................ */
 
    .imp-container::-webkit-scrollbar{
-   height: 15px;
+    display: none;
 }
-                      
- .imp-container::-webkit-scrollbar-track-piece{
-   background-color: lightgray;
-   border-radius: 10px;
-   border: 5px solid #0F2139;
-   margin: 400px;
-                       
-}
-                      
- .imp-container::-webkit-scrollbar-track{
-   border-radius: 10px;
- }
-  
- .imp-container::-webkit-scrollbar-thumb{
-  background-color:#0f2139;
-  border-radius: 10px;
- }
-                      
-                      
-.imp-container::-webkit-scrollbar-button{
-  background-color: white;
-  width: 0px;
-}
-              
-
-
-@media screen and (max-width: 1215px) {
-    .imp-container::-webkit-scrollbar-track-piece{
-        margin: 250px;
-    }
-
-    .impBox{
-        width: 60vw;
-        margin: 10px 25px;
-      }
-      
-      
-    .imp-content{
-        width: 60vw;
-        padding: 10px;
-    }
-
-    .imp-content p{
-        font-size: 15px;
-        height: 45%;
-        margin: 5px;
-        padding: 10px;
-    }
-}
-
-@media screen and (max-width: 770px) {
-    .imp-container::-webkit-scrollbar-track-piece{
-        margin: 100px;
-    }
-
-    .impBox, .imp-content{
-        width: 80vw;
-      }    
-}
-
-@media screen and (max-width: 500px) {
-    
-    .imp-container::-webkit-scrollbar-track-piece{
-        margin: 50px;
-    }
-    #implemetations{
-        height: auto;
-    }
-    #implementations h2{
-        font-size: 35px;
-    }
-    .imp-container{
-        height: 100vh;
-        margin: 5px;
-    }
-
-    .impBox, .imp-content{
-        width: 95vw;
-        margin: 5px 5px;
-    }    
-    .imp-content h3{
-        font-size: 22px;
-    }
-    .imp-content p{
-        font-size: 15px;
-        height: 50%;
-    }
-    
-}
-
-
-
 
 
 /* .................Policy Styling.......................... */
@@ -703,63 +758,50 @@ body{
     align-items: center;
     flex-wrap: wrap-reverse;
 }
-
 .policy-text, .policy-image{
     height: 100%;
     width: 50%;
 }
-
 .policy-text{
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: #0F2139;
 }
 .policy-text h2{
     color: white;
-    font-size: 30px;
+    font-size: 60px;
     font-weight: 700;
-    font-family: 'poppins';
+    font-family: avocadoBold;
     margin: 10px;
     padding: 10px;
+}
 
-}
-.policy-text h2::before{
-    content: '';
-    height: 80px;
-    border: 4px solid white;
-    border-radius: 4px;
-    margin: 30px;
-}
 .policy-text h3{
     color: white;
-    font-size: 20px;
-    font-family: 'inter';
+    font-size: 25px;
+    font-family: avocadoReg;
+    letter-spacing: 1px;
     margin: 5px ;
     padding: 5px;
 }
 .policy-text p{
     color: white;
-    font-family: 'inter';
+    font-family: 'poppins';
     font-size: 16px;
     text-align: center;
     margin: 10px;
     padding: 10px;
 }
-
-
 .policy-image{
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
-    background-color: #0F2139;
 }
 
 @media screen and (max-width: 1215px) {
     #policy{
         height: auto;
-        background-color: #0F2139;
         flex-direction: column-reverse;
         flex-wrap: nowrap;
         padding: 30px;
@@ -780,22 +822,15 @@ body{
     flex-direction: column;
     justify-content:space-evenly;
     align-items: center;
-    background-color: white;
+    background-color:rgb(107, 166, 210);
 }
 
 .collab h2{
-    font-family: 'poppins';
-    font-size: 35px;
+    font-family: avocadoBold;
+    font-size: 60px;
     font-weight: 700;
     color: #0F2139;
     padding: 10px;
-}
-.collab h2::before{
-    content: '';
-    height: 100px;
-    border: 4px solid #0F2139;
-    border-radius: 4px;
-    margin: 20px;
 }
 
 .collab hr{
@@ -826,7 +861,7 @@ body{
 
 .collab-head h3{
     font-size: 30px;
-    font-family: 'Poppins';
+    font-family: 'poppins';
     color: #0F2139;
 }
 
@@ -834,11 +869,12 @@ body{
     width: 90%;
     font-size: 16px;
     color: #0F2139;
-    font-family: 'inter';
+    font-family: 'poppins';
+    line-height: 25px;
     text-align: justify;
     padding: 10px;
     margin: 10px;
-    border-bottom: 3px solid #0F2139;
+    /* border-bottom: 3px solid #0F2139; */
 }
 br{
     color: black;
@@ -891,31 +927,24 @@ br{
     flex-direction: column;
     align-items: center;
     height: auto;
-    background-color:#0F2139;
+    background-color:rgb(107, 166, 210);
 }
 
 #team h2{
-    font-size: 35px;
-    font-family: 'poppins';
+    font-size: 60px;
+    font-family: avocadoBold;
     margin: 10px;
     padding: 10px;
     color: white;
 }
-#team h2::before{
-    content: '';
-    height: 80px;
-    border: 4px solid white;
-    border-radius: 4px;
-    margin: 20px;
 
-}
 #team hr{
     color: white;
     width: 50%;
 }
 
 .teamInfoText{
-    font-size: 16px;
+    font-size: 17px;
     font-family: 'poppins';
     margin: 10px;
     padding: 10px;
@@ -988,11 +1017,10 @@ br{
     width: 80%;
 }
 .contact-content h2{
-    font-family: 'poppins';
-    font-size: 30px;
+    font-family: avocadoBold;
+    font-size: 50px;
     font-weight: 700;
     text-align: center;
-    /* color: #ff9d00; */
     color: #0F2139;
 }
 .contact-content h2::before{
@@ -1004,11 +1032,12 @@ br{
 }
 
 .contact-content p{
-    font-size: 18px;
-    font-family: 'inter';
+    font-size: 19px;
+    font-family: 'poppins';
     padding: 10px;
     margin: 10px;
-    line-height: 2rem;
+    /* letter-spacing: 1px; */
+    line-height: 2.5rem;
 }
 
 .links-container{
@@ -1074,19 +1103,6 @@ br{
     transform: translateX(0);
 }
 
-
-/* @keyframes sideAnimate{
-    from{
-        transform:translate(-100%);
-    }
-
-    to{
-        transform: translate(0);
-    }
-} */
-
-
-
 @media screen and (max-width: 1260px) {
 
     .nav-container{
@@ -1108,3 +1124,9 @@ br{
     }   
 }
 
+
+
+.right-flow-animate{
+    transition-property: transform;
+    transition-timing-function: ease-out;
+}
