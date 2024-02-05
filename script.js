@@ -77,7 +77,7 @@ function colorTransition(){
     const homeHeight = home.clientHeight;
     let ratio = home.scrollTop / homeHeight ;
     if(ratio<=2){
-        document.body.style.backgroundImage = `linear-gradient(to right, rgba(107, 166, 210, ${1.1*ratio}), rgba(107, 166, 210, ${1.1*ratio})), url(../images/main-background.webp)` ;
+        document.body.style.backgroundImage = `linear-gradient(to right, rgba(107, 166, 210, ${1.1*ratio}), rgba(107, 166, 210, ${1.1*ratio})), url(/images/main-background.webp)` ;
     }
     else if(ratio>2){
         document.body.style.backgroundImage = `rgb(107, 166, 210)`;
@@ -101,7 +101,7 @@ const colorTransitionObersver = new IntersectionObserver((entries) => {
         let scrollDirection = entry.intersectionRatio - previousRatio
         if(entry.isIntersecting && scrollDirection > 0){
             colorOpacity = 1.1*entry.intersectionRatio
-            document.body.style.backgroundImage = `linear-gradient(to right, rgba(107, 166, 210, ${colorOpacity}), rgba(107, 166, 210, ${colorOpacity})), url(../images/main-background.webp)` ;
+            document.body.style.backgroundImage = `linear-gradient(to right, rgba(107, 166, 210, ${colorOpacity}), rgba(107, 166, 210, ${colorOpacity})), url(/images/main-background.webp)` ;
             console.log('increasing')
         }
         if(entry.isIntersecting && scrollDirection < 0){
